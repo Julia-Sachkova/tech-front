@@ -1,9 +1,7 @@
-import Header from "../../components/Header";
-
 const Admin = () => {
   return (
     <section>
-      <Header />
+      <span>adminpanel</span>
     </section>
   );
 };

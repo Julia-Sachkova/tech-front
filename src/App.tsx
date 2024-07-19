@@ -1,14 +1,16 @@
 import { Outlet } from "react-router-dom";
 import { UserContext } from "./contexts/UserContext";
+import Header from "./components/Header";
+import { useAppSelector } from "./hooks";
 
 const App = () => {
-  const testUser = {
-    role: "admin",
-  };
+  const user = useAppSelector((state) => state.user.user);
 
   return (
-    <UserContext.Provider value={testUser}>
-      <div className="min-h-screen flex flex-col dark:bg-neutral-800 dark:text-white">
+    <UserContext.Provider value={user}>
+      <div className="min-h-screen flex flex-col">
+        <Header />
+
         <main className="flex flex-col flex-1">
           <Outlet />
         </main>

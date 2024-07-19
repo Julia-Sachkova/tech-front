@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { ADMIN } from "../constants/roles";
 
 const Header = () => {
+  const token = localStorage.getItem("token");
+
   return (
     <header className="flex flex-row items-center justify-between px-8 py-4 border-b border-neutral-400">
       <Link to="/">
@@ -24,7 +26,7 @@ const Header = () => {
           </Link>
         </ShowForPermission>
 
-        <Link to="/profile">
+        <Link to={token ? "/profile" : "/login"}>
           <Icon icon="gg:profile" width="36" height="36" />
         </Link>
       </div>

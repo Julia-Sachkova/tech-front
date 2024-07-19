@@ -4,6 +4,7 @@ import { ProtectedRoute } from "./components/ProtectedRoute";
 import App from "./App";
 import Admin from "./pages/Admin/Admin";
 import Main from "./pages/Main/Main";
+import Login from "./pages/Login/Login";
 
 export const router = createBrowserRouter([
   {
@@ -28,5 +29,9 @@ export const router = createBrowserRouter([
       },
     ],
     errorElement: <div>Error 404 Not found</div>,
+  },
+  {
+    path: "/login",
+    element: <Login />,
   },
 ]);

@@ -1,9 +1,21 @@
-import Header from "../../components/Header";
+import { useEffect } from "react";
+import { useAppDispatch } from "../../hooks";
+import { getUser } from "../../store/reducers/userSlice";
 
 const Main = () => {
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    const testUser = {
+      role: "admin",
+    };
+
+    dispatch(getUser(testUser));
+  }, []);
+
   return (
     <section>
-      <Header />
+      <span>main</span>
     </section>
   );
 };
