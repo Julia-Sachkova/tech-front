@@ -1,8 +1,9 @@
 import { useContext } from "react";
 import { UserContext } from "../contexts/UserContext";
 import { PermissionProps } from "../types/Permissions";
+import { Navigate } from "react-router-dom";
 
-export const ShowForPermission = (props: PermissionProps) => {
+export const ProtectedRoute = (props: PermissionProps) => {
   const user = useContext(UserContext);
 
   const isAllowed = props.roles.find((r) => r === user?.role);
@@ -10,6 +11,6 @@ export const ShowForPermission = (props: PermissionProps) => {
   if (isAllowed) {
     return props.children;
   } else {
-    return null;
+    return <Navigate to="/" replace />;
   }
 };

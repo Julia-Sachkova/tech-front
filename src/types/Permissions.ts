@@ -6,6 +6,6 @@ export type Permission = {
 export type Permissions = Permission[];
 
 export type PermissionProps = {
-  permission: string;
+  roles: string[];
   children: React.ReactNode;
 };
