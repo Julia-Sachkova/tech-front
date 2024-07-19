@@ -7,7 +7,7 @@ export const customTheme = createTheme({
     primary: {
       light: indigo[200],
       main: indigo[300],
-      dark: indigo[700],
+      dark: indigo[400],
       contrastText: "#fff",
     },
   },
