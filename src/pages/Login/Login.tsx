@@ -70,9 +70,12 @@ const Login = () => {
         </form>
 
         <div className="flex flex-col items-center">
-          <span>Еще не зарегистрированы?</span>
-          <Link to="/registration" className="text-neutral-400 underline">
-            Регистрация
+          <span>Еще нет аккаунта?</span>
+          <Link
+            to="https://t.me/Kirill_Sachkov"
+            className="text-neutral-400 underline"
+          >
+            Регистрация на обучение
           </Link>
         </div>
       </div>
