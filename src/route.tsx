@@ -5,6 +5,9 @@ import App from "./App";
 import Admin from "./pages/Admin/Admin";
 import Main from "./pages/Main/Main";
 import Login from "./pages/Login/Login";
+import Students from "./pages/Students/Students";
+import Lessons from "./pages/Lessons/Lessons";
+import Tasks from "./pages/Tasks/Tasks";
 
 export const router = createBrowserRouter([
   {
@@ -26,10 +29,25 @@ export const router = createBrowserRouter([
             <Admin />
           </ProtectedRoute>
         ),
+        children: [
+          {
+            path: "students",
+            element: <Students />,
+          },
+          {
+            path: "lessons",
+            element: <Lessons />,
+          },
+          {
+            path: "tasks",
+            element: <Tasks />,
+          },
+        ],
       },
     ],
     errorElement: <div>Error 404 Not found</div>,
   },
+
   {
     path: "/login",
     element: <Login />,
