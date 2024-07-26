@@ -18,7 +18,7 @@ const Admin = () => {
   return (
     <div className="px-8 py-5 flex flex-1">
       <ContentBlock>
-        <div className="flex flex-row justify-start px-1 py-6 gap-8 h-full">
+        <div className="flex flex-row justify-start px-2 py-6 gap-8 h-full">
           <Tabs
             value={tabValue}
             onChange={handleChange}
