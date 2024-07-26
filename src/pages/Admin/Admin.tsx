@@ -16,14 +16,14 @@ const Admin = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col px-20 py-5">
+    <div className="px-8 py-5 flex flex-1">
       <ContentBlock>
-        <div className="flex flex-row justify-start px-1 py-6 gap-8">
+        <div className="flex flex-row justify-start px-1 py-6 gap-8 h-full">
           <Tabs
             value={tabValue}
             onChange={handleChange}
             orientation="vertical"
-            sx={{ borderRight: 1, borderColor: "divider" }}
+            sx={{ borderRight: 1, borderColor: "divider", height: "100%" }}
           >
             <Tab
               label="Ученики"

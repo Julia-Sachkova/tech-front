@@ -7,7 +7,12 @@ interface UserState {
 
 const initialState: UserState = {
   user: {
+    name: "",
+    github: "",
+    photo: "",
+    contacts: "",
     role: "",
+    level: 0,
   },
 };
 
@@ -15,12 +20,12 @@ export const userSlice = createSlice({
   name: "user",
   initialState,
   reducers: {
-    getUser: (state, value) => {
+    getCurrentUser: (state, value) => {
       state.user = value.payload;
     },
   },
 });
 
-export const { getUser } = userSlice.actions;
+export const { getCurrentUser } = userSlice.actions;
 
 export default userSlice.reducer;
