@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 import { ADMIN } from "./constants/roles";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 import App from "./App";
@@ -30,6 +30,10 @@ export const router = createBrowserRouter([
           </ProtectedRoute>
         ),
         children: [
+          {
+            index: true,
+            element: <Navigate replace to="students" />,
+          },
           {
             path: "students",
             element: <Students />,

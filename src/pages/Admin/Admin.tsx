@@ -9,6 +9,8 @@ const Admin = () => {
   const [tabValue, setTabValue] = useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+    console.log(event);
+
     setTabValue(newValue);
   };
 
