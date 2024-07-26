@@ -7,7 +7,7 @@ const Header = () => {
   const token = localStorage.getItem("token");
 
   return (
-    <header className="flex flex-row items-center justify-between px-8 py-4 border-b border-neutral-400">
+    <header className="flex flex-row items-center justify-between px-8 py-4">
       <Link to="/">
         <div className="flex flex-row items-center gap-2">
           <Icon icon="mingcute:code-line" width="36" height="36" />

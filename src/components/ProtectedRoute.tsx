@@ -3,10 +3,6 @@ import { UserContext } from "../contexts/UserContext";
 import { PermissionProps } from "../types/Permissions";
 import { Navigate } from "react-router-dom";
 
-export type props = {
-  roles: string[];
-};
-
 export const ProtectedRoute = (props: PermissionProps) => {
   const user = useContext(UserContext);
 
