@@ -1,14 +1,14 @@
-import { teal } from "@mui/material/colors";
+import { cyan } from "@mui/material/colors";
 import { createTheme } from "@mui/material/styles";
 
 export const customTheme = createTheme({
   palette: {
     mode: "dark",
     primary: {
-      light: teal[200],
-      main: teal[300],
-      dark: teal[400],
-      contrastText: "#fff",
+      light: cyan[200],
+      main: cyan[300],
+      dark: cyan[400],
+      contrastText: "#000",
     },
   },
 });

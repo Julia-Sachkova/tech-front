@@ -15,7 +15,7 @@ const Tasks = () => {
     <ul className="grid grid-cols-4 gap-5 flex-1 h-fit">
       {tasks.map((task) => (
         <li
-          className="flex flex-col items-start gap-3 h-full px-5 py-3 bg-neutral-600 rounded-lg cursor-pointer"
+          className="flex flex-col items-start gap-3 h-full px-5 py-3 bg-neutral-600 rounded-lg shadow-xl cursor-pointer transition ease-in-out duration-300 hover:scale-110 hover:drop-shadow-xl"
           key={task.id}
         >
           <span className="text-lg font-semibold">{task.name}</span>

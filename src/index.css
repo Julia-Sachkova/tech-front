@@ -7,3 +7,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+@layer base {
+  :root {
+    --primary: #67e8f9;
+  }
+}
