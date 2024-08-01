@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../../hooks";
-import { getStudents } from "../../store/reducers/studentSlice";
+import { useAppDispatch, useAppSelector } from "../../../hooks";
+import { getStudents } from "../../../store/reducers/studentSlice";
 
 const Students = () => {
   const dispatch = useAppDispatch();

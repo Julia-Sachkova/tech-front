@@ -17,8 +17,8 @@ const Profile = () => {
   return (
     <section>
       <ContentBlock>
-        <div className="p-6 flex flex-row gap-10">
-          <div className="flex flex-col items-center border-r border-neutral-500 gap-10">
+        <div className="px-4 py-6 flex flex-row gap-10">
+          <div className="flex flex-col items-center border-r border-neutral-500 gap-6">
             <div>
               {user?.photo ? (
                 <img src={user.photo} className="w-12 h-12 rounded-full" />

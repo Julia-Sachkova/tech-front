@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../../hooks";
-import { getTasks } from "../../store/reducers/tasksSlice";
+import { useAppDispatch, useAppSelector } from "../../../hooks";
+import { getTasks } from "../../../store/reducers/tasksSlice";
 
 const Tasks = () => {
   const dispatch = useAppDispatch();

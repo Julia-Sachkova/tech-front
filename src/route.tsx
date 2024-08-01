@@ -5,11 +5,12 @@ import App from "./App";
 import Admin from "./pages/Admin/Admin";
 import Main from "./pages/Main/Main";
 import Login from "./pages/Login/Login";
-import Students from "./pages/Students/Students";
-import Lessons from "./pages/Lessons/Lessons";
-import Tasks from "./pages/Tasks/Tasks";
+import Students from "./pages/Admin/Students/Students";
+import Lessons from "./pages/Admin/Lessons/Lessons";
+import Tasks from "./pages/Admin/Tasks/Tasks";
 import Profile from "./pages/Profile/Profile";
 import NotFound from "./pages/NotFound/NotFound";
+import General from "./pages/Profile/General/General";
 
 export const router = createBrowserRouter([
   {
@@ -30,7 +31,7 @@ export const router = createBrowserRouter([
           },
           {
             path: "general",
-            element: <div>home</div>,
+            element: <General />,
           },
           {
             path: "achievements",
