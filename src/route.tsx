@@ -8,6 +8,8 @@ import Login from "./pages/Login/Login";
 import Students from "./pages/Students/Students";
 import Lessons from "./pages/Lessons/Lessons";
 import Tasks from "./pages/Tasks/Tasks";
+import Profile from "./pages/Profile/Profile";
+import NotFound from "./pages/NotFound/NotFound";
 
 export const router = createBrowserRouter([
   {
@@ -20,7 +22,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/profile",
-        element: <div>profile</div>,
+        element: <Profile />,
       },
       {
         path: "/adminpanel",
@@ -49,7 +51,7 @@ export const router = createBrowserRouter([
         ],
       },
     ],
-    errorElement: <div>Error 404 Not found</div>,
+    errorElement: <NotFound />,
   },
 
   {
