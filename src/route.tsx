@@ -23,6 +23,24 @@ export const router = createBrowserRouter([
       {
         path: "/profile",
         element: <Profile />,
+        children: [
+          {
+            index: true,
+            element: <Navigate replace to="general" />,
+          },
+          {
+            path: "general",
+            element: <div>home</div>,
+          },
+          {
+            path: "achievements",
+            element: <div>achievements</div>,
+          },
+          {
+            path: "payment",
+            element: <div>payment</div>,
+          },
+        ],
       },
       {
         path: "/adminpanel",
