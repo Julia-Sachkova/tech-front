@@ -3,6 +3,8 @@ import ContentBlock from "../../components/ContentBlock";
 import { UserContext } from "../../contexts/UserContext";
 import { Tab, Tabs } from "@mui/material";
 import { Link, Outlet } from "react-router-dom";
+import { ShowForPermission } from "../../components/ShowForPermission";
+import { USER } from "../../constants/roles";
 
 const Profile = () => {
   const [tabValue, setTabValue] = useState(0);
@@ -34,8 +36,14 @@ const Profile = () => {
               sx={{ height: "100%" }}
             >
               <Tab label="Основное" component={Link} to={"general"} />
-              <Tab label="Достижения" component={Link} to={"achievements"} />
-              <Tab label="Оплата и другое" component={Link} to={"payment"} />
+
+              <ShowForPermission roles={[USER]}>
+                <Tab label="Достижения" component={Link} to={"achievements"} />
+              </ShowForPermission>
+
+              <ShowForPermission roles={[USER]}>
+                <Tab label="Оплата и другое" component={Link} to={"payment"} />
+              </ShowForPermission>
             </Tabs>
           </div>
 

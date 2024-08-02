@@ -5,9 +5,9 @@ export const customTheme = createTheme({
   palette: {
     mode: "dark",
     primary: {
-      light: cyan[200],
-      main: cyan[300],
-      dark: cyan[400],
+      light: cyan[400],
+      main: cyan[500],
+      dark: cyan[600],
       contrastText: "#000",
     },
   },

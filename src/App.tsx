@@ -18,7 +18,7 @@ const App = () => {
       github: "https://github.com/Julia-Sachkova",
       photo: "",
       contacts: "+79000000000",
-      role: "admin",
+      role: "user",
       level: 10,
     };
 

@@ -3,6 +3,7 @@ import userSlice from "./reducers/userSlice";
 import studentSlice from "./reducers/studentSlice";
 import tasksSlice from "./reducers/tasksSlice";
 import lessonsSlice from "./reducers/lessonsSlice";
+import mainUserDataSlice from "./reducers/mainUserDataSlice";
 
 export const store = configureStore({
   reducer: {
@@ -10,6 +11,7 @@ export const store = configureStore({
     student: studentSlice,
     tasks: tasksSlice,
     lessons: lessonsSlice,
+    mainUserData: mainUserDataSlice,
   },
 });
 
