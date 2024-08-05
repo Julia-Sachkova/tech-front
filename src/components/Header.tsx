@@ -22,12 +22,18 @@ const Header = () => {
               icon="material-symbols:analytics-outline-rounded"
               width="36"
               height="36"
+              className="transition ease-in-out duration-300 hover:scale-110"
             />
           </Link>
         </ShowForPermission>
 
         <Link to={token ? "/profile" : "/login"}>
-          <Icon icon="gg:profile" width="36" height="36" />
+          <Icon
+            icon="gg:profile"
+            width="36"
+            height="36"
+            className="transition ease-in-out duration-300 hover:scale-110"
+          />
         </Link>
       </div>
     </header>

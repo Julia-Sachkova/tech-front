@@ -5,6 +5,7 @@ import { Tab, Tabs } from "@mui/material";
 import { Link, Outlet } from "react-router-dom";
 import { ADMIN, USER } from "../../constants/roles";
 import { ShowForPermission } from "../../components/ShowForPermission";
+import { Icon } from "@iconify/react";
 
 const Profile = () => {
   const [tabValue, setTabValue] = useState(0);
@@ -50,12 +51,36 @@ const Profile = () => {
     setTabValue(newValue);
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+  };
+
   return (
     <section>
       <ContentBlock>
         <div className="px-4 py-6 flex flex-row gap-10">
-          <div className="flex flex-col items-center border-r border-neutral-500 gap-6">
-            <div>
+          <div className="flex flex-col items-center border-r border-neutral-500">
+            <div className="flex flex-row justify-between items-center w-full px-3">
+              <Link to="settings">
+                <Icon
+                  icon="tabler:settings"
+                  width="24"
+                  height="24"
+                  className="transition ease-in-out duration-300 hover:scale-110"
+                />
+              </Link>
+
+              <Link to="/login" onClick={handleLogout}>
+                <Icon
+                  icon="tabler:logout"
+                  width="24"
+                  height="24"
+                  className="transition ease-in-out duration-300 hover:scale-110"
+                />
+              </Link>
+            </div>
+
+            <div className="mb-6">
               {user?.photo ? (
                 <img src={user.photo} className="w-12 h-12 rounded-full" />
               ) : (
