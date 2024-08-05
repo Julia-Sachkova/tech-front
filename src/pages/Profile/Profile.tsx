@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import ContentBlock from "../../components/ContentBlock";
 import { UserContext } from "../../contexts/UserContext";
-import { Tab, Tabs } from "@mui/material";
+import { Tab, Tabs, TextField } from "@mui/material";
 import { Link, Outlet } from "react-router-dom";
 import { ADMIN, USER } from "../../constants/roles";
 import { ShowForPermission } from "../../components/ShowForPermission";
@@ -9,6 +9,7 @@ import { Icon } from "@iconify/react";
 
 const Profile = () => {
   const [tabValue, setTabValue] = useState(0);
+
   const user = useContext(UserContext);
 
   const userTabs = [
@@ -80,13 +81,17 @@ const Profile = () => {
               </Link>
             </div>
 
-            <div className="mb-6">
+            <TextField type="file" id="avaInput" className="!hidden" />
+            <label htmlFor="avaInput" className="mb-6 group relative">
+              <div className="absolute top-0 bottom-0 left-0 right-0 bg-neutral-900 opacity-0 rounded-full flex items-center justify-center cursor-pointer transition-all ease-in-out duration-300 group-hover:opacity-50">
+                <Icon icon="mdi:camera-outline" width="28" height="28" />
+              </div>
               {user?.photo ? (
                 <img src={user.photo} className="w-12 h-12 rounded-full" />
               ) : (
                 <div className="bg-primary w-24 h-24 rounded-full" />
               )}
-            </div>
+            </label>
 
             <ShowForPermission roles={[USER]}>
               <Tabs
