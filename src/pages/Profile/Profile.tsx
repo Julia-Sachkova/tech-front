@@ -3,12 +3,46 @@ import ContentBlock from "../../components/ContentBlock";
 import { UserContext } from "../../contexts/UserContext";
 import { Tab, Tabs } from "@mui/material";
 import { Link, Outlet } from "react-router-dom";
+import { ADMIN, USER } from "../../constants/roles";
 import { ShowForPermission } from "../../components/ShowForPermission";
-import { USER } from "../../constants/roles";
 
 const Profile = () => {
   const [tabValue, setTabValue] = useState(0);
   const user = useContext(UserContext);
+
+  const userTabs = [
+    {
+      label: "Основное",
+      to: "general",
+    },
+    {
+      label: "Занятия",
+      to: "lessons",
+    },
+    {
+      label: "Задания",
+      to: "issues",
+    },
+    {
+      label: "Достижения",
+      to: "achievements",
+    },
+    {
+      label: "Оплата и подписка",
+      to: "payment",
+    },
+  ];
+
+  const adminTabs = [
+    {
+      label: "Основное",
+      to: "general",
+    },
+    {
+      label: "Проверка заданий",
+      to: "review",
+    },
+  ];
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     console.log(event);
@@ -29,22 +63,41 @@ const Profile = () => {
               )}
             </div>
 
-            <Tabs
-              value={tabValue}
-              onChange={handleChange}
-              orientation="vertical"
-              sx={{ height: "100%" }}
-            >
-              <Tab label="Основное" component={Link} to={"general"} />
+            <ShowForPermission roles={[USER]}>
+              <Tabs
+                value={tabValue}
+                onChange={handleChange}
+                orientation="vertical"
+                sx={{ height: "100%" }}
+              >
+                {userTabs.map((tab) => (
+                  <Tab
+                    label={tab.label}
+                    component={Link}
+                    to={tab.to}
+                    key={tab.label}
+                  />
+                ))}
+              </Tabs>
+            </ShowForPermission>
 
-              <ShowForPermission roles={[USER]}>
-                <Tab label="Достижения" component={Link} to={"achievements"} />
-              </ShowForPermission>
-
-              <ShowForPermission roles={[USER]}>
-                <Tab label="Оплата и другое" component={Link} to={"payment"} />
-              </ShowForPermission>
-            </Tabs>
+            <ShowForPermission roles={[ADMIN]}>
+              <Tabs
+                value={tabValue}
+                onChange={handleChange}
+                orientation="vertical"
+                sx={{ height: "100%" }}
+              >
+                {adminTabs.map((tab) => (
+                  <Tab
+                    label={tab.label}
+                    component={Link}
+                    to={tab.to}
+                    key={tab.label}
+                  />
+                ))}
+              </Tabs>
+            </ShowForPermission>
           </div>
 
           <Outlet />

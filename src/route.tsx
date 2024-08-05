@@ -11,6 +11,8 @@ import Tasks from "./pages/Admin/Tasks/Tasks";
 import Profile from "./pages/Profile/Profile";
 import NotFound from "./pages/NotFound/NotFound";
 import General from "./pages/Profile/General/General";
+import Achievements from "./pages/Profile/Achievements/Achievements";
+import Payment from "./pages/Profile/Payment/Payment";
 
 export const router = createBrowserRouter([
   {
@@ -34,12 +36,20 @@ export const router = createBrowserRouter([
             element: <General />,
           },
           {
+            path: "lessons",
+            element: <Lessons />,
+          },
+          {
+            path: "issues",
+            element: <Tasks />,
+          },
+          {
             path: "achievements",
-            element: <div>achievements</div>,
+            element: <Achievements />,
           },
           {
             path: "payment",
-            element: <div>payment</div>,
+            element: <Payment />,
           },
         ],
       },
