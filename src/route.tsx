@@ -13,6 +13,7 @@ import NotFound from "./pages/NotFound/NotFound";
 import General from "./pages/Profile/General/General";
 import Achievements from "./pages/Profile/Achievements/Achievements";
 import Payment from "./pages/Profile/Payment/Payment";
+import Settings from "./pages/Profile/Settings/Settings";
 
 export const router = createBrowserRouter([
   {
@@ -50,6 +51,10 @@ export const router = createBrowserRouter([
           {
             path: "payment",
             element: <Payment />,
+          },
+          {
+            path: "settings",
+            element: <Settings />,
           },
         ],
       },

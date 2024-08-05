@@ -8,7 +8,7 @@ export const customTheme = createTheme({
       light: cyan[400],
       main: cyan[500],
       dark: cyan[600],
-      contrastText: "#000",
+      contrastText: "#fff",
     },
   },
 });
