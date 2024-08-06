@@ -1,6 +1,5 @@
 import { Comment } from "./Comments";
 import { PhotoAndFiles } from "./PhotoAndFiles";
-import { TaskBlock } from "./TaskBlock";
 import { TaskStatus } from "./TaskStatus";
 import { TaskTag } from "./TaskTag";
 
@@ -8,7 +7,7 @@ export type Task = {
   id: string;
   name: string;
   description: string;
-  block: TaskBlock;
+  block: string;
   tags: TaskTag[];
   photoAndFiles: PhotoAndFiles[];
   createDate: Date;
@@ -20,4 +19,7 @@ export type Task = {
   experience: number;
 };
 
-export type TaskList = Task[];
+export type TaskModule = {
+  id: string;
+  name: string;
+};

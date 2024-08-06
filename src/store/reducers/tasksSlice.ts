@@ -1,12 +1,23 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { Task } from "../../types/Tasks";
+import { Task, TaskModule } from "../../types/Tasks";
 
 interface TasksState {
   tasks: Task[];
+  taskModules: TaskModule[];
 }
 
 const initialState: TasksState = {
   tasks: [],
+  taskModules: [
+    {
+      id: "0",
+      name: "backend",
+    },
+    {
+      id: "1",
+      name: "frontend",
+    },
+  ],
 };
 
 export const TasksSlice = createSlice({
@@ -19,10 +30,7 @@ export const TasksSlice = createSlice({
           id: "0",
           name: "Test 1",
           description: "test test tesssdddddddddddddddddddddd ddssssssssst",
-          block: {
-            id: "0",
-            name: "test",
-          },
+          block: "0",
           tags: [
             {
               id: "0",
@@ -39,7 +47,7 @@ export const TasksSlice = createSlice({
               path: "0",
             },
           ],
-          createDate: new Date("26.07.2024"),
+          createDate: new Date(),
           status: {
             id: "0",
             userId: "0",
@@ -51,7 +59,7 @@ export const TasksSlice = createSlice({
               userName: "0",
               userId: "0",
               text: "0",
-              createDate: new Date("26.07.2024"),
+              createDate: new Date(),
             },
           ],
           subtask: "",
@@ -63,10 +71,7 @@ export const TasksSlice = createSlice({
           id: "1",
           name: "Test 2",
           description: "test test tessssssd   dddddddddddddddddddsssssst",
-          block: {
-            id: "0",
-            name: "test",
-          },
+          block: "1",
           tags: [
             {
               id: "0",
@@ -83,7 +88,7 @@ export const TasksSlice = createSlice({
               path: "0",
             },
           ],
-          createDate: new Date("26.07.2024"),
+          createDate: new Date(),
           status: {
             id: "0",
             userId: "0",
@@ -95,7 +100,7 @@ export const TasksSlice = createSlice({
               userName: "0",
               userId: "0",
               text: "0",
-              createDate: new Date("26.07.2024"),
+              createDate: new Date(),
             },
           ],
           subtask: "",
@@ -107,10 +112,7 @@ export const TasksSlice = createSlice({
           id: "2",
           name: "Test 3",
           description: "test test tessddd ddddddddddsssssssssst",
-          block: {
-            id: "0",
-            name: "test",
-          },
+          block: "0",
           tags: [
             {
               id: "0",
@@ -127,7 +129,7 @@ export const TasksSlice = createSlice({
               path: "0",
             },
           ],
-          createDate: new Date("26.07.2024"),
+          createDate: new Date(),
           status: {
             id: "0",
             userId: "0",
@@ -139,7 +141,7 @@ export const TasksSlice = createSlice({
               userName: "0",
               userId: "0",
               text: "0",
-              createDate: new Date("26.07.2024"),
+              createDate: new Date(),
             },
           ],
           subtask: "",
@@ -151,10 +153,7 @@ export const TasksSlice = createSlice({
           id: "3",
           name: "Test 4",
           description: "test test tesd dddddddddddddssssssssssst",
-          block: {
-            id: "0",
-            name: "test",
-          },
+          block: "0",
           tags: [
             {
               id: "0",
@@ -171,7 +170,7 @@ export const TasksSlice = createSlice({
               path: "0",
             },
           ],
-          createDate: new Date("26.07.2024"),
+          createDate: new Date(),
           status: {
             id: "0",
             userId: "0",
@@ -183,7 +182,7 @@ export const TasksSlice = createSlice({
               userName: "0",
               userId: "0",
               text: "0",
-              createDate: new Date("26.07.2024"),
+              createDate: new Date(),
             },
           ],
           subtask: "",
@@ -195,10 +194,7 @@ export const TasksSlice = createSlice({
           id: "4",
           name: "Test 5",
           description: "test test tesssddddddddddddddddddddddd ssssssssst",
-          block: {
-            id: "0",
-            name: "test",
-          },
+          block: "1",
           tags: [
             {
               id: "0",
@@ -215,7 +211,7 @@ export const TasksSlice = createSlice({
               path: "0",
             },
           ],
-          createDate: new Date("26.07.2024"),
+          createDate: new Date(),
           status: {
             id: "0",
             userId: "0",
@@ -227,7 +223,7 @@ export const TasksSlice = createSlice({
               userName: "0",
               userId: "0",
               text: "0",
-              createDate: new Date("26.07.2024"),
+              createDate: new Date(),
             },
           ],
           subtask: "",
