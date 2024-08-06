@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../../hooks";
 import { getTasks } from "../../../store/reducers/tasksSlice";
 import { Button, Menu, MenuItem } from "@mui/material";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 const Tasks = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -44,6 +45,7 @@ const Tasks = () => {
         onClick={handleClickListItem}
         variant="contained"
         className="w-fit"
+        endIcon={<KeyboardArrowDownIcon />}
       >
         {taskModules.find((m) => m.id === selectedId)?.name}
       </Button>
