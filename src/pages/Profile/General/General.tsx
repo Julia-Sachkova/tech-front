@@ -1,9 +1,8 @@
-import { useContext } from "react";
-import { UserContext } from "../../../contexts/UserContext";
 import { Link } from "react-router-dom";
+import { useAppSelector } from "../../../hooks";
 
 const General = () => {
-  const user = useContext(UserContext);
+  const user = useAppSelector((state) => state.user.user);
 
   return (
     <ul className="flex flex-col gap-4">

@@ -20,8 +20,17 @@ export const userSlice = createSlice({
   name: "user",
   initialState,
   reducers: {
-    getCurrentUser: (state, value) => {
-      state.user = value.payload;
+    getCurrentUser: (state) => {
+      const testUser = {
+        name: "Test",
+        github: "https://github.com/Julia-Sachkova",
+        photo: "",
+        contacts: "+79000000000",
+        role: "user",
+        level: 10,
+      };
+
+      state.user = testUser;
     },
   },
 });

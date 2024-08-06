@@ -1,16 +1,16 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import ContentBlock from "../../components/ContentBlock";
-import { UserContext } from "../../contexts/UserContext";
 import { Tab, Tabs, TextField } from "@mui/material";
 import { Link, Outlet } from "react-router-dom";
 import { ADMIN, USER } from "../../constants/roles";
 import { ShowForPermission } from "../../components/ShowForPermission";
 import { Icon } from "@iconify/react";
+import { useAppSelector } from "../../hooks";
 
 const Profile = () => {
   const [tabValue, setTabValue] = useState(0);
 
-  const user = useContext(UserContext);
+  const user = useAppSelector((state) => state.user.user);
 
   const userTabs = [
     {

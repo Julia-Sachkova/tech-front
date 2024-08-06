@@ -2,8 +2,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Button, TextField } from "@mui/material";
-import { useContext } from "react";
-import { UserContext } from "../../../contexts/UserContext";
+import { useAppSelector } from "../../../hooks";
 
 export type Inputs = {
   name: string;
@@ -22,7 +21,7 @@ const schema = yup
   .required();
 
 const Settings = () => {
-  const user = useContext(UserContext);
+  const user = useAppSelector((state) => state.user.user);
 
   const {
     register,
