@@ -3,6 +3,7 @@
 // import { getSubscriptions } from "../../store/reducers/subscriptionSlice";
 
 import Cover from "./components/Cover";
+import ShortAbout from "./components/ShortAbout";
 
 const Main = () => {
   //const dispatch = useAppDispatch();
@@ -18,6 +19,7 @@ const Main = () => {
   return (
     <section className="flex flex-col items-center">
       <Cover />
+      <ShortAbout />
     </section>
   );
 };

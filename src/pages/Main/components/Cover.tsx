@@ -5,7 +5,7 @@ import { Rating } from "@mui/material";
 
 const Cover = () => {
   return (
-    <div className="flex flex-row gap-20 relative overflow-hidden">
+    <div className="w-full flex flex-row justify-between gap-20 relative overflow-hidden bg-neutral-700 pl-20 pt-6 rounded-xl">
       <div className="flex flex-col gap-5">
         <h1 className="text-6xl font-semibold">
           Менторинг .Net
@@ -34,11 +34,11 @@ const Cover = () => {
           </li>
         </ul>
 
-        <div className="flex flex-row gap-5 relative px-3 py-2 mt-auto mb-0 w-fit">
-          <div className="absolute top-0 right-0 bottom-0 left-0 bg-primary opacity-20 rounded-lg -z-10" />
-          <span className="text-5xl font-semibold">9.5</span>
+        <div className="flex flex-row gap-5 relative px-3 py-2 mt-auto mb-6 w-fit">
+          <div className="absolute top-0 right-0 bottom-0 left-0 bg-primary opacity-20 rounded-lg" />
+          <span className="text-5xl font-semibold z-10">9.5</span>
 
-          <div className="flex flex-col">
+          <div className="flex flex-col z-10">
             <span className="text-lg">Средняя оценка</span>
             <span className="text-sm mb-3">По последним опросам учеников</span>
 
@@ -48,11 +48,33 @@ const Cover = () => {
       </div>
 
       <img
-        className="w-[450px] h-[450px] object-contain z-10 absolute -right-10 -bottom-6"
+        className="w-[500px] h-[500px] object-contain z-10 absolute -right-10 -bottom-7 animate-slideInFromLeft"
         src={mainPhoto}
       />
 
-      <div className="bg-primary w-[450px] h-[450px] [clip-path:circle(65%_at_65%_65%)]" />
+      <span className="text-neutral-600 text-4xl font-semibold -rotate-45 absolute top-36 right-[48%] z-10 animate-opacityHidden">
+        Web
+      </span>
+      <span className="text-neutral-600 text-3xl font-semibold rotate-12 absolute top-10 right-[48%] z-10 animate-opacityHidden">
+        EF Core
+      </span>
+      <span className="text-neutral-600 text-6xl font-semibold absolute top-1/2 right-[40%] z-10 animate-opacityHidden">
+        C#
+      </span>
+      <span className="text-neutral-600 text-5xl font-semibold rotate-12 absolute top-1/2 right-1/2 z-10 animate-opacityHidden">
+        React
+      </span>
+      <span className="text-neutral-600 text-6xl font-semibold -rotate-12 absolute top-20 right-1/3 z-10 animate-opacityHidden">
+        .Net
+      </span>
+      <span className="text-neutral-600 text-4xl font-semibold rotate-12 absolute bottom-20 right-[40%] z-10 animate-opacityHidden">
+        TypeScript
+      </span>
+      <span className="text-neutral-600 text-3xl font-semibold -rotate-12 absolute bottom-16 right-[58%] z-10 animate-opacityHidden">
+        Docker
+      </span>
+
+      <div className="bg-primary w-[500px] h-[500px] [clip-path:circle(65%_at_65%_65%)]" />
     </div>
   );
 };
