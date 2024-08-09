@@ -14,11 +14,11 @@
   }
 
   @font-face {
-    font-family: "Play";
+    font-family: "WixMadeforText";
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url(/src/assets/fonts/playregular.woff2) format("woff2"),
-      url(/src/assets/fonts/playregular.woff) format("woff");
+    src: url(/src/assets/fonts/WixMadeforText-Regular.woff2) format("woff2"),
+      url(/src/assets/fonts/WixMadeforText-Regular.woff) format("woff");
   }
 }

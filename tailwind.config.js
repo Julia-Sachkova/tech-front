@@ -22,7 +22,7 @@ export default {
       },
     },
     fontFamily: {
-      sans: ['"Play"', "sans-serif"],
+      sans: ['"WixMadeforText"', "sans-serif"],
     },
   },
   plugins: [],

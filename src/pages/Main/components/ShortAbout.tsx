@@ -36,7 +36,7 @@ const ShortAbout = () => {
             <Icon icon={ab.icon} width="28" height="28" />
           </div>
 
-          <span className="text-xl text-center">{ab.title}</span>
+          <span className="text-xl">{ab.title}</span>
         </li>
       ))}
     </ul>

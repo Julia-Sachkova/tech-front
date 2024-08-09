@@ -5,7 +5,7 @@ import { Rating } from "@mui/material";
 
 const Cover = () => {
   return (
-    <div className="w-full flex flex-row justify-between gap-20 relative overflow-hidden bg-neutral-700 pl-20 pt-6 rounded-xl">
+    <div className="w-full flex flex-row justify-between gap-20 relative overflow-hidden bg-neutral-700 pl-14 pt-6 rounded-xl">
       <div className="flex flex-col gap-5">
         <h1 className="text-6xl font-semibold">
           Менторинг .Net
