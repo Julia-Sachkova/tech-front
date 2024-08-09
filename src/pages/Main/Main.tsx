@@ -4,6 +4,7 @@
 
 import AboutProfession from "./components/AboutProfession";
 import Cover from "./components/Cover";
+import MentoringFromCourses from "./components/MentoringFromCourses";
 import ShortAbout from "./components/ShortAbout";
 
 const Main = () => {
@@ -22,6 +23,7 @@ const Main = () => {
       <Cover />
       <ShortAbout />
       <AboutProfession />
+      <MentoringFromCourses />
     </section>
   );
 };

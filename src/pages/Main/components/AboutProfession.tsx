@@ -32,6 +32,15 @@ const AboutProfession = () => {
             <span>Lead</span>
           </li>
         </ul>
+        <span className="text-neutral-500 mt-2">
+          По данным{" "}
+          <Link
+            to="https://career.habr.com/salaries?spec_aliases%5B%5D=fullstack"
+            className="border-b border-neutral-500"
+          >
+            Хабр
+          </Link>
+        </span>
       </div>
 
       <div className="relative">
