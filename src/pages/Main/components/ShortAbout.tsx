@@ -19,7 +19,7 @@ const ShortAbout = () => {
       icon: "mdi:resume",
     },
     {
-      title: "Сообщество единомышленников",
+      title: "Сообщество учеников, таких же, как ты",
       icon: "fluent:people-community-28-filled",
     },
     {

@@ -52,16 +52,19 @@ const Cover = () => {
         src={mainPhoto}
       />
 
-      <span className="text-neutral-600 text-4xl font-semibold -rotate-45 absolute top-36 right-[48%] z-10 animate-opacityHidden">
+      <span className="text-neutral-600 text-4xl font-semibold -rotate-45 absolute top-1/3 right-[45%] z-10 animate-opacityHidden">
         Web
       </span>
       <span className="text-neutral-600 text-3xl font-semibold rotate-12 absolute top-10 right-[48%] z-10 animate-opacityHidden">
         EF Core
       </span>
+      <span className="text-neutral-600 text-3xl font-semibold rotate-12 absolute top-[43%] right-[57%] z-10 animate-opacityHidden">
+        CSS
+      </span>
       <span className="text-neutral-600 text-6xl font-semibold absolute top-1/2 right-[40%] z-10 animate-opacityHidden">
         C#
       </span>
-      <span className="text-neutral-600 text-5xl font-semibold rotate-12 absolute top-1/2 right-1/2 z-10 animate-opacityHidden">
+      <span className="text-neutral-600 text-5xl font-semibold absolute top-32 right-[52%] z-10 animate-opacityHidden">
         React
       </span>
       <span className="text-neutral-600 text-6xl font-semibold -rotate-12 absolute top-20 right-1/3 z-10 animate-opacityHidden">
@@ -72,6 +75,9 @@ const Cover = () => {
       </span>
       <span className="text-neutral-600 text-3xl font-semibold -rotate-12 absolute bottom-16 right-[58%] z-10 animate-opacityHidden">
         Docker
+      </span>
+      <span className="text-neutral-600 text-4xl font-semibold -rotate-12 absolute bottom-1/3 right-1/2 z-10 animate-opacityHidden">
+        ASP.NET Core
       </span>
 
       <div className="bg-primary w-[500px] h-[500px] [clip-path:circle(65%_at_65%_65%)]" />
