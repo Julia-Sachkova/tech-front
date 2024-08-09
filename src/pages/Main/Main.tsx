@@ -2,6 +2,7 @@
 // import { useAppDispatch, useAppSelector } from "../../hooks";
 // import { getSubscriptions } from "../../store/reducers/subscriptionSlice";
 
+import AboutProfession from "./components/AboutProfession";
 import Cover from "./components/Cover";
 import ShortAbout from "./components/ShortAbout";
 
@@ -20,6 +21,7 @@ const Main = () => {
     <section className="flex flex-col items-center">
       <Cover />
       <ShortAbout />
+      <AboutProfession />
     </section>
   );
 };
