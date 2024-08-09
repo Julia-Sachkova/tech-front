@@ -21,6 +21,9 @@ export default {
         opacityHidden: "1s ease-out 0s 1 opacityHidden",
       },
     },
+    fontFamily: {
+      sans: ['"Play"', "sans-serif"],
+    },
   },
   plugins: [],
   darkMode: "selector",

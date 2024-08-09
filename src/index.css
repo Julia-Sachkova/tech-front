@@ -12,4 +12,13 @@
   :root {
     --primary: #06b6d4;
   }
+
+  @font-face {
+    font-family: "Play";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/src/assets/fonts/playregular.woff2) format("woff2"),
+      url(/src/assets/fonts/playregular.woff) format("woff");
+  }
 }
