@@ -3,6 +3,7 @@
 // import { getSubscriptions } from "../../store/reducers/subscriptionSlice";
 
 import AboutProfession from "./components/AboutProfession";
+import ConsistOf from "./components/ConsistOf";
 import Cover from "./components/Cover";
 import MentoringFromCourses from "./components/MentoringFromCourses";
 import ShortAbout from "./components/ShortAbout";
@@ -26,6 +27,7 @@ const Main = () => {
       <AboutProfession />
       <MentoringFromCourses />
       <WillSuit />
+      <ConsistOf />
     </section>
   );
 };
