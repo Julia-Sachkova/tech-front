@@ -6,6 +6,7 @@ import AboutProfession from "./components/AboutProfession";
 import Cover from "./components/Cover";
 import MentoringFromCourses from "./components/MentoringFromCourses";
 import ShortAbout from "./components/ShortAbout";
+import WillSuit from "./components/WillSuit";
 
 const Main = () => {
   //const dispatch = useAppDispatch();
@@ -24,6 +25,7 @@ const Main = () => {
       <ShortAbout />
       <AboutProfession />
       <MentoringFromCourses />
+      <WillSuit />
     </section>
   );
 };
