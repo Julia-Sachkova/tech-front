@@ -8,6 +8,7 @@ import Cover from "./components/Cover";
 import MentoringFromCourses from "./components/MentoringFromCourses";
 import ShortAbout from "./components/ShortAbout";
 import Stack from "./components/Stack";
+import WhatWillYouGet from "./components/WhatWillYouGet";
 import WillSuit from "./components/WillSuit";
 
 const Main = () => {
@@ -30,6 +31,7 @@ const Main = () => {
       <WillSuit />
       <ConsistOf />
       <Stack />
+      <WhatWillYouGet />
     </section>
   );
 };
