@@ -1,16 +1,8 @@
-import { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../../../../hooks";
-import { getLessons } from "../../../../store/reducers/lessonsSlice";
+import { useAppSelector } from "../../../../hooks";
 import { Link } from "react-router-dom";
 
 const LessonsList = () => {
-  const dispatch = useAppDispatch();
-
   const lessons = useAppSelector((state) => state.lessons.lessons);
-
-  useEffect(() => {
-    dispatch(getLessons());
-  }, []);
 
   return (
     <ul className="grid grid-cols-4 gap-5 flex-1 h-fit">
