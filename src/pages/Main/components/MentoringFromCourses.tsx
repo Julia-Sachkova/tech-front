@@ -9,7 +9,7 @@ const MentoringFromCourses = () => {
       </h2>
 
       <ul className="grid grid-cols-2 gap-16">
-        <li className="flex flex-col gap-4 items-center bg-neutral-700 rounded-xl">
+        <li className="flex flex-col gap-4 items-center bg-neutral-700 rounded-xl transition ease-in-out duration-300 hover:scale-110">
           <div className="text-3xl font-bold uppercase bg-gradient-to-r from-cyan-500 to-blue-500 w-full text-center rounded-t-xl py-3">
             менторинг
           </div>
@@ -52,7 +52,7 @@ const MentoringFromCourses = () => {
           </ul>
         </li>
 
-        <li className="flex flex-col gap-4 items-center bg-neutral-700 rounded-xl">
+        <li className="flex flex-col gap-4 items-center bg-neutral-700 rounded-xl transition ease-in-out duration-300 hover:scale-110">
           <div className="text-3xl font-bold uppercase bg-gradient-to-r from-cyan-900 to-green-300 w-full text-center rounded-t-xl py-3">
             КУРСЫ
           </div>
