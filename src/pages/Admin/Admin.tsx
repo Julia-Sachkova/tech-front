@@ -1,5 +1,5 @@
 import { Tab, Tabs } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import SchoolIcon from "@mui/icons-material/School";
 import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
@@ -7,13 +7,41 @@ import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import ContentBlock from "../../components/ContentBlock";
 
 const Admin = () => {
-  const [tabValue, setTabValue] = useState(0);
+  const currentTab = () => {
+    const pathArr = window.location.pathname.split("/");
+    let curPath;
+
+    if (pathArr[pathArr.length - 1].includes(":")) {
+      const newArr = pathArr.slice(0, -1);
+
+      curPath = newArr[newArr.length - 1];
+    } else {
+      curPath = pathArr?.[pathArr.length - 1];
+    }
+
+    switch (curPath) {
+      case "students":
+        return 0;
+      case "lessons":
+        return 1;
+      case "tasks":
+        return 2;
+      default:
+        return 0;
+    }
+  };
+
+  const [tabValue, setTabValue] = useState(currentTab);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     console.log(event);
 
     setTabValue(newValue);
   };
+
+  useEffect(() => {
+    currentTab();
+  }, []);
 
   return (
     <div className="flex flex-1">

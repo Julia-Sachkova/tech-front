@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { Lesson } from "../../types/Lesson";
+import { LessonType } from "../../types/Lesson";
 
 interface LessonsState {
-  lessons: Lesson[];
+  lessons: LessonType[];
 }
 
 const initialState: LessonsState = {
@@ -20,7 +20,7 @@ export const LessonsSlice = createSlice({
           title: "Lesson 1",
           description: "",
           date: "31.07.2024",
-          link: "",
+          link: "https://ik.imagekit.io/ikmedia/example_video.mp4",
           record: "",
           comments: "",
           homework: "",
@@ -33,7 +33,7 @@ export const LessonsSlice = createSlice({
           title: "Lesson 2",
           description: "",
           date: "31.08.2024",
-          link: "",
+          link: "https://ik.imagekit.io/ikmedia/example_video.mp4",
           record: "",
           comments: "",
           homework: "",
@@ -46,7 +46,7 @@ export const LessonsSlice = createSlice({
           title: "Lesson 3",
           description: "",
           date: "30.09.2024",
-          link: "",
+          link: "https://ik.imagekit.io/ikmedia/example_video.mp4",
           record: "",
           comments: "",
           homework: "",
@@ -59,7 +59,7 @@ export const LessonsSlice = createSlice({
           title: "Lesson 4",
           description: "",
           date: "31.10.2024",
-          link: "",
+          link: "https://ik.imagekit.io/ikmedia/example_video.mp4",
           record: "",
           comments: "",
           homework: "",
@@ -72,7 +72,7 @@ export const LessonsSlice = createSlice({
           title: "Lesson 5",
           description: "",
           date: "30.11.2024",
-          link: "",
+          link: "https://ik.imagekit.io/ikmedia/example_video.mp4",
           record: "",
           comments: "",
           homework: "",

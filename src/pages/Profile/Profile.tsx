@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ContentBlock from "../../components/ContentBlock";
 import { Tab, Tabs, TextField } from "@mui/material";
 import { Link, Outlet } from "react-router-dom";
@@ -8,7 +8,36 @@ import { Icon } from "@iconify/react";
 import { useAppSelector } from "../../hooks";
 
 const Profile = () => {
-  const [tabValue, setTabValue] = useState(0);
+  const currentTab = () => {
+    const pathArr = window.location.pathname.split("/");
+    let curPath;
+
+    if (pathArr[pathArr.length - 1].includes(":")) {
+      const newArr = pathArr.slice(0, -1);
+
+      curPath = newArr[newArr.length - 1];
+    } else {
+      curPath = pathArr?.[pathArr.length - 1];
+    }
+
+    switch (curPath) {
+      case "general":
+        return 0;
+      case "lessons":
+      case "review":
+        return 1;
+      case "issues":
+        return 2;
+      case "achievements":
+        return 3;
+      case "payment":
+        return 4;
+      default:
+        return 0;
+    }
+  };
+
+  const [tabValue, setTabValue] = useState(currentTab);
 
   const user = useAppSelector((state) => state.user.user);
 
@@ -55,6 +84,10 @@ const Profile = () => {
   const handleLogout = () => {
     localStorage.removeItem("token");
   };
+
+  useEffect(() => {
+    currentTab();
+  }, []);
 
   return (
     <section>

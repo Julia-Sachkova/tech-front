@@ -14,6 +14,8 @@ import General from "./pages/Profile/General/General";
 import Achievements from "./pages/Profile/Achievements/Achievements";
 import Payment from "./pages/Profile/Payment/Payment";
 import Settings from "./pages/Profile/Settings/Settings";
+import Lesson from "./pages/Admin/Lessons/Lesson/Lesson";
+import LessonsList from "./pages/Admin/Lessons/LessonsList/LessonsList";
 
 export const router = createBrowserRouter([
   {
@@ -37,8 +39,17 @@ export const router = createBrowserRouter([
             element: <General />,
           },
           {
-            path: "lessons",
             element: <Lessons />,
+            children: [
+              {
+                path: "lessons",
+                element: <LessonsList />,
+              },
+              {
+                path: "lessons/:id",
+                element: <Lesson />,
+              },
+            ],
           },
           {
             path: "issues",
@@ -75,8 +86,17 @@ export const router = createBrowserRouter([
             element: <Students />,
           },
           {
-            path: "lessons",
             element: <Lessons />,
+            children: [
+              {
+                path: "lessons",
+                element: <LessonsList />,
+              },
+              {
+                path: "lessons/:id",
+                element: <Lesson />,
+              },
+            ],
           },
           {
             path: "tasks",
