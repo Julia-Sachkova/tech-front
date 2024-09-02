@@ -24,7 +24,7 @@ const WhatWillYouGet = () => {
         Что ты получишь за время обучения
       </h2>
 
-      <ul className="grid grid-cols-2 gap-6">
+      <ul className="grid grid-cols-2 gap-6 px-16">
         {gets.map((get, index) => (
           <li
             key={index}
