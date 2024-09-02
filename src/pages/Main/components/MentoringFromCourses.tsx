@@ -21,7 +21,10 @@ const MentoringFromCourses = () => {
             </li>
             <li>
               Продолжительность{" "}
-              <span className="text-primary font-bold">5 месяцев</span>
+              <span className="text-primary font-bold">
+                зависит только от тебя,
+              </span>
+              <br />в среднем 3 месяца
             </li>
             <li>
               <span className="border-b-2 border-primary">Три</span> занятия{" "}

@@ -21,7 +21,7 @@ const WhatWillYouGet = () => {
   return (
     <div className="w-full border-y-2 py-8 mx-10 flex flex-col gap-16">
       <h2 className="text-5xl font-semibold">
-        Что ты получишь за 5 месяцев обучения
+        Что ты получишь за время обучения
       </h2>
 
       <ul className="grid grid-cols-2 gap-6">

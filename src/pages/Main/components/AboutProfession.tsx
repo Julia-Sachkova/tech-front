@@ -3,7 +3,7 @@ import Fullstack from "../../../assets/images/fullstack.png";
 
 const AboutProfession = () => {
   return (
-    <div className="w-full border-y-2 py-6 flex flex-row gap-12">
+    <div className="w-full border-y-2 py-6 flex flex-row gap-12 px-16">
       <div className="flex flex-col w-2/3">
         <h2 className="text-4xl font-semibold uppercase">О профессии</h2>
 
@@ -43,19 +43,7 @@ const AboutProfession = () => {
         </span>
       </div>
 
-      <div className="relative">
-        <img src={Fullstack} alt="Fullstack." className="h-96" />
-
-        <span className="absolute bottom-0 right-10 text-sm text-neutral-500">
-          Designed by{" "}
-          <Link
-            to="https://pngtree.com/freepng/software-programming-concept-in-3d-isometric-outline-design-development-team-programs-tests-and-optimizes-computer-works-office-line-web-template-vector-illustration-with-people-scene_7601731.html?sol=downref&id=bef"
-            className="text-primary"
-          >
-            PngTree
-          </Link>
-        </span>
-      </div>
+      <img src={Fullstack} alt="Fullstack." className="h-96" />
     </div>
   );
 };

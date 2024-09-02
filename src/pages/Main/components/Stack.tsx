@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Fullstack from "../../../assets/images/fullstack.png";
 
 const Stack = () => {
@@ -50,7 +49,7 @@ const Stack = () => {
     <div className="flex flex-col items-center w-full py-16 gap-12">
       <h2 className="text-4xl font-semibold uppercase">Стек технологий</h2>
 
-      <div className="flex flex-row justify-between">
+      <div className="flex flex-row justify-between px-16">
         <p className="text-lg w-1/2">
           Стэк очень обширный, мы затронем все этапы разработки реального
           проекта, начиная от проектирования и заканчивая деплоем на свой
@@ -82,19 +81,7 @@ const Stack = () => {
           <code className="bg-neutral-600 px-1 rounded-md">Docker</code>.
         </p>
 
-        <div className="relative">
-          <img src={Fullstack} alt="Fullstack." className="h-96" />
-
-          <span className="absolute bottom-0 right-10 text-sm text-neutral-500">
-            Designed by{" "}
-            <Link
-              to="https://pngtree.com/freepng/software-programming-concept-in-3d-isometric-outline-design-development-team-programs-tests-and-optimizes-computer-works-office-line-web-template-vector-illustration-with-people-scene_7601731.html?sol=downref&id=bef"
-              className="text-primary"
-            >
-              PngTree
-            </Link>
-          </span>
-        </div>
+        <img src={Fullstack} alt="Fullstack." className="h-96" />
       </div>
 
       <ul className="flex flex-col gap-8">

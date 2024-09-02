@@ -1,6 +1,7 @@
 import Task from "../../../assets/images/task.jpg";
 import Review from "../../../assets/images/review.jpg";
 import Chat from "../../../assets/images/chat.png";
+import LessonDs from "../../../assets/images/lesson-ds.jpg";
 import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
@@ -13,25 +14,37 @@ const ConsistOf = () => {
 
       <ul className="flex flex-row gap-6">
         <li className="text-xl flex flex-row items-end gap-2 bg-neutral-600 rounded-xl p-4">
-          <span className="text-5xl font-semibold">120+</span>
+          <span className="text-5xl font-semibold">24</span>
           <span className="leading-none">
-            часов
-            <br /> занятий
+            часа занятий
+            <br />в месяц
           </span>
         </li>
         <li className="text-xl flex flex-row items-end gap-2 bg-neutral-600 rounded-xl p-4">
-          <span className="text-5xl font-semibold">112</span>
-          <span>заданий</span>
+          <span className="text-5xl font-semibold">100</span>
+          <span className="leading-none">
+            и более
+            <br />
+            заданий
+          </span>
         </li>
         <li className="text-xl flex flex-row items-end gap-2 bg-neutral-600 rounded-xl p-4">
-          <span className="text-5xl font-semibold">12</span>
-          <span>модулей</span>
+          <span className="text-5xl font-semibold">35</span>
+          <span className="leading-none">
+            современных
+            <br />
+            технологий
+          </span>
         </li>
       </ul>
 
       <ul className="flex flex-col gap-16 pt-10">
         <li className="flex flex-row gap-12">
-          <img src={Task} alt="занятие." className="h-96 w-1/2 object-cover" />
+          <img
+            src={LessonDs}
+            alt="занятие."
+            className="h-96 w-1/2 object-cover"
+          />
           <div className="flex flex-col gap-4 w-1/2">
             <h3 className="text-3xl font-semibold">Онлайн занятия</h3>
             <p className="text-lg">

@@ -29,9 +29,9 @@ const ShortAbout = () => {
   ];
 
   return (
-    <ul className="py-8 grid grid-cols-3 mb-14">
+    <ul className="py-8 grid grid-cols-3 mb-14 mt-5">
       {about.map((ab, index) => (
-        <li key={index} className="flex flex-row gap-3 items-center px-8 py-3">
+        <li key={index} className="flex flex-row gap-5 items-center px-8 py-4">
           <div className="bg-primary p-2 rounded-full">
             <Icon icon={ab.icon} width="28" height="28" />
           </div>

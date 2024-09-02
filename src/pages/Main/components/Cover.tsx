@@ -5,8 +5,8 @@ import { Rating } from "@mui/material";
 
 const Cover = () => {
   return (
-    <div className="w-full flex flex-row justify-between gap-20 relative overflow-hidden bg-neutral-700 pl-14 pt-6 rounded-xl">
-      <div className="flex flex-col gap-5">
+    <div className="w-11/12 flex flex-row justify-between gap-20 relative overflow-hidden bg-neutral-700 pl-14 pt-6 rounded-xl">
+      <div className="flex flex-col gap-5 z-20">
         <h1 className="text-6xl font-semibold">
           Менторинг .Net
           <br /> Fullstack
@@ -48,7 +48,7 @@ const Cover = () => {
       </div>
 
       <img
-        className="w-[500px] h-[500px] object-contain z-10 absolute -right-10 -bottom-7 animate-slideInFromLeft"
+        className="w-[500px] h-[500px] object-contain z-30 absolute -right-10 -bottom-7 animate-slideInFromLeft"
         src={mainPhoto}
       />
 
@@ -80,7 +80,7 @@ const Cover = () => {
         ASP.NET Core
       </span>
 
-      <div className="bg-primary w-[500px] h-[500px] [clip-path:circle(65%_at_65%_65%)]" />
+      <div className="bg-primary w-[500px] h-[500px] [clip-path:circle(65%_at_65%_65%)] z-20" />
     </div>
   );
 };
