@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
 import mainPhoto from "../../../assets/images/mainPhoto.png";
-import { Rating } from "@mui/material";
+//import { Rating } from "@mui/material";
 
 const Cover = () => {
   return (
@@ -34,7 +34,7 @@ const Cover = () => {
           </li>
         </ul>
 
-        <div className="flex flex-row gap-5 relative px-3 py-2 mt-auto mb-6 w-fit">
+        {/* <div className="flex flex-row gap-5 relative px-3 py-2 mt-auto mb-6 w-fit">
           <div className="absolute top-0 right-0 bottom-0 left-0 bg-primary opacity-20 rounded-lg" />
           <span className="text-5xl font-semibold z-10">9.5</span>
 
@@ -44,7 +44,7 @@ const Cover = () => {
 
             <Rating defaultValue={9.5} precision={0.5} max={10} readOnly />
           </div>
-        </div>
+        </div> */}
       </div>
 
       <img

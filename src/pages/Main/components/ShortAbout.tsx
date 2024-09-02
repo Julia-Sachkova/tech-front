@@ -15,11 +15,11 @@ const ShortAbout = () => {
       icon: "mdi:rate-review",
     },
     {
-      title: "Составлении резюме",
+      title: "Помощь в составлении резюме",
       icon: "mdi:resume",
     },
     {
-      title: "Сообщество учеников, таких же, как ты",
+      title: "Сообщество мотивированных учеников",
       icon: "fluent:people-community-28-filled",
     },
     {

@@ -8,7 +8,7 @@ const AboutProfession = () => {
         <h2 className="text-4xl font-semibold uppercase">О профессии</h2>
 
         <p className="text-lg tracking-wide mt-6">
-          <span className="font-bold">Fullstack разработчик</span> — это
+          <span className="font-bold"> .Net Fullstack разработчик</span> — это
           универсальный специалист, который может создавать сайты и
           веб-приложения, работая, как над серверной частью, то есть бэкендом,
           так и над визуальной, клиентской частью - фронтендом. Поэтому такие
