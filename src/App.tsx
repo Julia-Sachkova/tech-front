@@ -17,7 +17,7 @@ const App = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
 
-      <main className="flex flex-col flex-1 px-8 py-5 ">
+      <main className="flex flex-col flex-1 px-2 sm:px-8 py-2 sm:py-5 ">
         <Outlet />
       </main>
       <footer />
