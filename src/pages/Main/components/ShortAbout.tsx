@@ -29,14 +29,30 @@ const ShortAbout = () => {
   ];
 
   return (
-    <ul className="py-8 grid grid-cols-3 mb-14 mt-5">
+    <ul className="w-full xl:w-11/12 grid grid-cols-2 lg:grid-cols-3 mb-14 mt-5">
       {about.map((ab, index) => (
-        <li key={index} className="flex flex-row gap-5 items-center px-8 py-4">
+        <li
+          key={index}
+          className="flex flex-col sm:flex-row gap-5 items-center px-3 lg:px-5 xl:px-8 py-3 xl:py-4"
+        >
           <div className="bg-primary p-2 rounded-full">
-            <Icon icon={ab.icon} width="28" height="28" />
+            <Icon
+              icon={ab.icon}
+              width="20"
+              height="20"
+              className="block lg:hidden"
+            />
+            <Icon
+              icon={ab.icon}
+              width="28"
+              height="28"
+              className="hidden lg:block"
+            />
           </div>
 
-          <span className="text-xl">{ab.title}</span>
+          <span className="text-center sm:text-left lg:text-lg xl:text-xl">
+            {ab.title}
+          </span>
         </li>
       ))}
     </ul>
