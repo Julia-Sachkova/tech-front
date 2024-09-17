@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { Task, TaskModule } from "../../types/Tasks";
+import { TaskType, TaskModule } from "../../types/Tasks";
 
 interface TasksState {
-  tasks: Task[];
+  tasks: TaskType[];
   taskModules: TaskModule[];
 }
 

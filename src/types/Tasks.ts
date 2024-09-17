@@ -3,7 +3,7 @@ import { PhotoAndFiles } from "./PhotoAndFiles";
 import { TaskStatus } from "./TaskStatus";
 import { TaskTag } from "./TaskTag";
 
-export type Task = {
+export type TaskType = {
   id: string;
   name: string;
   description: string;

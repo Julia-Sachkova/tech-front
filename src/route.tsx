@@ -16,6 +16,8 @@ import Payment from "./pages/Profile/Payment/Payment";
 import Settings from "./pages/Profile/Settings/Settings";
 import Lesson from "./pages/Admin/Lessons/Lesson/Lesson";
 import LessonsList from "./pages/Admin/Lessons/LessonsList/LessonsList";
+import TasksList from "./pages/Admin/Tasks/TasksList/TasksList";
+import Task from "./pages/Admin/Tasks/Task/Task";
 
 export const router = createBrowserRouter([
   {
@@ -52,8 +54,17 @@ export const router = createBrowserRouter([
             ],
           },
           {
-            path: "issues",
             element: <Tasks />,
+            children: [
+              {
+                path: "issues",
+                element: <TasksList />,
+              },
+              {
+                path: "issues/:id",
+                element: <Task />,
+              },
+            ],
           },
           {
             path: "achievements",
@@ -99,8 +110,17 @@ export const router = createBrowserRouter([
             ],
           },
           {
-            path: "tasks",
             element: <Tasks />,
+            children: [
+              {
+                path: "issues",
+                element: <TasksList />,
+              },
+              {
+                path: "issues/:id",
+                element: <Task />,
+              },
+            ],
           },
         ],
       },
