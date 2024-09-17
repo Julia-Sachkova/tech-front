@@ -5,6 +5,7 @@ import { TaskType } from "../../../../types/Tasks";
 import { Icon } from "@iconify/react";
 import Preloader from "../../../../components/Preloader";
 import Chip from "@mui/material/Chip";
+import { Button, TextField } from "@mui/material";
 
 const Task = () => {
   const navigate = useNavigate();
@@ -28,7 +29,7 @@ const Task = () => {
             ← К заданиям
           </button>
 
-          <div className="flex flex-col flex-1 gap-8 bg-neutral-600 px-5 py-4 rounded-xl drop-shadow-xl">
+          <div className="flex flex-col flex-1 gap-14 bg-neutral-600 px-5 py-4 rounded-xl drop-shadow-xl">
             <div className="flex flex-col gap-2">
               <h3 className="text-4xl">{task.name}</h3>
             </div>
@@ -78,8 +79,36 @@ const Task = () => {
             </ul>
 
             <div className="flex flex-col">
-              <span className="text-sm text-neutral-400">Описание задачи</span>
+              <span className=" text-neutral-400">Описание задачи</span>
               <p>{task.description}</p>
+            </div>
+
+            <div className="flex flex-col gap-3">
+              <span className="text-neutral-400">Комментарии</span>
+
+              <ul className="flex flex-col gap-3">
+                {task.comments.map((comment) => (
+                  <li key={comment.id} className="flex flex-col">
+                    <span className="text-sm text-neutral-300">
+                      {comment.userName}
+                    </span>
+                    <p>{comment.text}</p>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="flex flex-row items-end    gap-4">
+                <TextField
+                  id="outlined-multiline-flexible"
+                  label="Добавить комментарий..."
+                  multiline
+                  variant="standard"
+                  className="w-1/3"
+                />
+                <Button variant="contained" size="small" className="h-fit">
+                  Отправить
+                </Button>
+              </div>
             </div>
           </div>
         </div>
