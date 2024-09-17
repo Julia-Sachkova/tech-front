@@ -29,7 +29,7 @@ const Task = () => {
             ← К заданиям
           </button>
 
-          <div className="flex flex-col flex-1 gap-14 bg-neutral-600 px-5 py-4 rounded-xl drop-shadow-xl">
+          <div className="flex flex-col flex-1 gap-12 bg-neutral-600 p-5 rounded-xl drop-shadow-xl">
             <div className="flex flex-col gap-2">
               <h3 className="text-4xl">{task.name}</h3>
             </div>
