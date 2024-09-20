@@ -5,15 +5,17 @@ import { TaskType } from "../../../../types/Tasks";
 import { Icon } from "@iconify/react";
 import Preloader from "../../../../components/Preloader";
 import Chip from "@mui/material/Chip";
-import { Button, TextField } from "@mui/material";
 import { ShowForPermission } from "../../../../components/ShowForPermission";
 import { ADMIN } from "../../../../constants/roles";
+import Comments from "./Comments/Comments";
+import { Button } from "@mui/material";
 
 const Task = () => {
   const navigate = useNavigate();
   const { id } = useParams();
 
   const [task, setTask] = useState<TaskType>({} as TaskType);
+  const [showComments, setShowComments] = useState(false);
 
   const tasks = useAppSelector((state) => state.tasks.tasks);
 
@@ -98,36 +100,23 @@ const Task = () => {
               </p>
             </div>
 
-            <div className="flex flex-col gap-3">
-              <span className="text-neutral-300 text-lg">Комментарии</span>
+            {showComments ? (
+              <Button
+                variant="outlined"
+                onClick={() => setShowComments(!showComments)}
+              >
+                СКРЫТЬ КОММЕНТАРИИ
+              </Button>
+            ) : (
+              <Button
+                variant="contained"
+                onClick={() => setShowComments(!showComments)}
+              >
+                ПОКАЗАТЬ КОММЕНТАРИИ
+              </Button>
+            )}
 
-              <ul className="flex flex-col gap-3">
-                {task.comments.map((comment) => (
-                  <li
-                    key={comment.id}
-                    className="flex flex-col bg-neutral-500 p-2 rounded-lg drop-shadow-xl w-fit"
-                  >
-                    <span className="text-sm text-neutral-300">
-                      {comment.userName}
-                    </span>
-                    <p>{comment.text}</p>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="flex flex-row items-end    gap-4">
-                <TextField
-                  id="outlined-multiline-flexible"
-                  label="Добавить комментарий..."
-                  multiline
-                  variant="standard"
-                  className="w-1/3"
-                />
-                <Button variant="contained" size="small" className="h-fit">
-                  Отправить
-                </Button>
-              </div>
-            </div>
+            {showComments && <Comments comments={task.comments} />}
           </div>
         </div>
       ) : (
