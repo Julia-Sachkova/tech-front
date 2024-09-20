@@ -24,7 +24,7 @@ const Admin = () => {
         return 0;
       case "lessons":
         return 1;
-      case "tasks":
+      case "issues":
         return 2;
       default:
         return 0;
@@ -70,7 +70,7 @@ const Admin = () => {
             <Tab
               label="Задания"
               component={Link}
-              to={"tasks"}
+              to={"issues"}
               icon={<FormatListBulletedIcon />}
               iconPosition="start"
             />

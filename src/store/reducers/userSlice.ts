@@ -26,7 +26,7 @@ export const userSlice = createSlice({
         github: "https://github.com/Julia-Sachkova",
         photo: "",
         contacts: "+79000000000",
-        role: "user",
+        role: "admin",
         level: 10,
       };
 

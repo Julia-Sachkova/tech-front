@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { useAppSelector } from "../../../../hooks";
 import { TaskType } from "../../../../types/Tasks";
 import { Icon } from "@iconify/react";
 import Preloader from "../../../../components/Preloader";
 import Chip from "@mui/material/Chip";
 import { Button, TextField } from "@mui/material";
+import { ShowForPermission } from "../../../../components/ShowForPermission";
+import { ADMIN } from "../../../../constants/roles";
 
 const Task = () => {
   const navigate = useNavigate();
@@ -30,8 +32,19 @@ const Task = () => {
           </button>
 
           <div className="flex flex-col flex-1 gap-12 bg-neutral-600 p-5 rounded-xl drop-shadow-xl">
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-row items-center gap-5">
               <h3 className="text-4xl">{task.name}</h3>
+
+              <ShowForPermission roles={[ADMIN]}>
+                <Link to="/">
+                  <Icon
+                    icon="lucide:edit"
+                    width="30"
+                    height="30"
+                    className="transition ease-in-out duration-300 hover:scale-110 text-neutral-300"
+                  />
+                </Link>
+              </ShowForPermission>
             </div>
 
             <ul className="flex flex-col gap-2">
@@ -79,16 +92,21 @@ const Task = () => {
             </ul>
 
             <div className="flex flex-col">
-              <span className=" text-neutral-400">Описание задачи</span>
-              <p>{task.description}</p>
+              <span className="text-neutral-300 text-lg">Описание задачи</span>
+              <p className="border-l  border-neutral-500 pl-2">
+                {task.description}
+              </p>
             </div>
 
             <div className="flex flex-col gap-3">
-              <span className="text-neutral-400">Комментарии</span>
+              <span className="text-neutral-300 text-lg">Комментарии</span>
 
               <ul className="flex flex-col gap-3">
                 {task.comments.map((comment) => (
-                  <li key={comment.id} className="flex flex-col">
+                  <li
+                    key={comment.id}
+                    className="flex flex-col bg-neutral-500 p-2 rounded-lg drop-shadow-xl w-fit"
+                  >
                     <span className="text-sm text-neutral-300">
                       {comment.userName}
                     </span>
