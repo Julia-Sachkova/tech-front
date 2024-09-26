@@ -9,8 +9,8 @@ const Cover = () => {
     <div className="w-full lg:w-11/12 flex flex-col items-end sm:items-start sm:flex-row justify-between gap-5 md:gap-20 relative overflow-hidden bg-neutral-700 pl-3 sm:pl-7 xl:pl-14 pt-3 lg:pt-5 xl:pt-6 rounded-xl">
       <div className="w-full flex flex-col sm:gap-3 md:gap-5 z-30">
         <h1 className="text-3xl lg:text-5xl xl:text-7xl 2xl:text-8xl font-semibold whitespace-nowrap">
-          Менторинг .Net
-          <br /> Fullstack
+          .Net Fullstack
+          <br /> курс
         </h1>
 
         <ul className="flex flex-row flex-wrap sm:divide-x text-neutral-400 items-center text-sm lg:text-lg mb-5 sm:mb-0">
