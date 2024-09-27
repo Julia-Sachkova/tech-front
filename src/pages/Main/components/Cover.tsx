@@ -20,17 +20,17 @@ const Cover = () => {
           <li className="inline-block border-r border-neutral-400 pr-2 sm:px-2 xl:px-3 after:duration-1000 ease-out after:block after:h-0.5 after:w-full after:origin-bottom-right after:scale-x-0 after:bg-primary after:transition-transform after:hover:origin-bottom-left after:hover:scale-x-100">
             <Link
               to="https://www.youtube.com/@KirillSachkov"
-              className="flex flex-row gap-2 items-center md:py-2"
+              className="flex flex-row gap-2 items-center py-2"
             >
               <Icon icon="mdi:youtube" width="28" className="hidden lg:block" />
               <Icon icon="mdi:youtube" width="20" className="block lg:hidden" />
               <span>YouTube</span>
             </Link>
           </li>
-          <li className="inline-block px-2 xl:px-3 after:duration-1000 ease-out after:block after:h-0.5 after:w-full after:origin-bottom-right after:scale-x-0 after:bg-primary after:transition-transform after:hover:origin-bottom-left after:hover:scale-x-100">
+          <li className="inline-block px-3 after:duration-1000 ease-out after:block after:h-0.5 after:w-full after:origin-bottom-right after:scale-x-0 after:bg-primary after:transition-transform after:hover:origin-bottom-left after:hover:scale-x-100">
             <Link
               to="https://t.me/sachkov_blog"
-              className="flex flex-row gap-2 items-center md:py-2"
+              className="flex flex-row gap-2 items-center pl-3 py-2"
             >
               <Icon
                 icon="ic:baseline-telegram"
