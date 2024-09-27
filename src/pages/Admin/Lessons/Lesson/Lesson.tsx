@@ -21,10 +21,15 @@ const Lesson = () => {
   return (
     <>
       {lesson.id ? (
-        <div className="flex flex-1 flex-col gap-10">
-          <button onClick={() => navigate(-1)} className="text-lg w-fit">
+        <div className="flex flex-1 flex-col">
+          <button onClick={() => navigate(-1)} className="text-lg w-fit mb-10">
             ← К занятиям
           </button>
+
+          <div className="flex flex-col gap-2 mb-4">
+            <h3 className="text-5xl">{lesson.title}</h3>
+            <span className="text-neutral-400">{lesson.date}</span>
+          </div>
 
           <video controls className="w-full" src={lesson.link} />
         </div>

@@ -11,7 +11,7 @@ const WillSuit = () => {
 
   return (
     <div className="w-full flex flex-col gap-12 border-y-2 pt-6 pb-10 px-16">
-      <h2 className="text-5xl font-semibold">Тебе подойдет менторинг, если:</h2>
+      <h2 className="text-5xl font-semibold">Тебе подойдет курс, если:</h2>
 
       <div className="flex flex-row justify-between gap-16">
         <img src={Fullstack} alt="Fullstack." className="h-96" />

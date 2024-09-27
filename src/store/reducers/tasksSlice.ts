@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { Task, TaskModule } from "../../types/Tasks";
+import { TaskType, TaskModule } from "../../types/Tasks";
 
 interface TasksState {
-  tasks: Task[];
+  tasks: TaskType[];
   taskModules: TaskModule[];
 }
 
@@ -56,9 +56,16 @@ export const TasksSlice = createSlice({
           comments: [
             {
               id: "0",
-              userName: "0",
+              userName: "Test",
               userId: "0",
-              text: "0",
+              text: "0dskjnsd dfksdkfjskdjfd fdskjf",
+              createDate: new Date(),
+            },
+            {
+              id: "1",
+              userName: "Test",
+              userId: "0",
+              text: "00 dfdf dfsdfs",
               createDate: new Date(),
             },
           ],

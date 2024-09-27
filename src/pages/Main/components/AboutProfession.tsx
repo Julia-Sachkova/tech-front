@@ -18,18 +18,24 @@ const AboutProfession = () => {
 
         <ul className="flex flex-row gap-6 text-neutral-800 mt-12">
           <li className="flex flex-col gap-2 bg-white drop-shadow-xl rounded-xl px-4 py-2">
-            <span className="text-3xl font-bold">от 78 000 ₽</span>
-            <span>Junior</span>
+            <span className="text-3xl font-bold whitespace-nowrap">
+              от 78 000 ₽
+            </span>
+            <span className="text-lg">Junior</span>
           </li>
 
           <li className="flex flex-col gap-2 bg-white drop-shadow-xl rounded-xl px-4 py-2">
-            <span className="text-3xl font-bold">от 163 000 ₽</span>
-            <span>Middle</span>
+            <span className="text-3xl font-bold whitespace-nowrap">
+              от 163 000 ₽
+            </span>
+            <span className="text-lg">Middle</span>
           </li>
 
           <li className="flex flex-col gap-2 bg-white drop-shadow-xl rounded-xl px-4 py-2">
-            <span className="text-3xl font-bold">от 353 000 ₽</span>
-            <span>Lead</span>
+            <span className="text-3xl font-bold whitespace-nowrap">
+              от 353 000 ₽
+            </span>
+            <span className="text-lg">Lead</span>
           </li>
         </ul>
         <span className="text-neutral-500 mt-2">

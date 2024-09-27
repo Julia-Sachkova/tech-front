@@ -8,10 +8,8 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 const ConsistOf = () => {
   return (
     <div className="w-full flex flex-col items-center gap-16 bg-neutral-700 pt-16 pb-8 px-6">
-      <h2 className="text-5xl font-semibold uppercase">
-        Из чего состоит менториг
-      </h2>
-
+      <h2 className="text-5xl font-semibold uppercase">Из чего состоит курс</h2>
+      {/* 
       <ul className="flex flex-row gap-6">
         <li className="text-xl flex flex-row items-end gap-2 bg-neutral-600 rounded-xl p-4">
           <span className="text-5xl font-semibold">24</span>
@@ -36,7 +34,7 @@ const ConsistOf = () => {
             технологий
           </span>
         </li>
-      </ul>
+      </ul> */}
 
       <ul className="flex flex-col gap-16 pt-10">
         <li className="flex flex-row gap-12">

@@ -5,7 +5,7 @@
 import AboutProfession from "./components/AboutProfession";
 import ConsistOf from "./components/ConsistOf";
 import Cover from "./components/Cover";
-import MentoringFromCourses from "./components/MentoringFromCourses";
+// import MentoringFromCourses from "./components/MentoringFromCourses";
 import ShortAbout from "./components/ShortAbout";
 import Stack from "./components/Stack";
 import WhatWillYouGet from "./components/WhatWillYouGet";
@@ -27,7 +27,7 @@ const Main = () => {
       <Cover />
       <ShortAbout />
       <AboutProfession />
-      <MentoringFromCourses />
+      {/* <MentoringFromCourses /> */}
       <WillSuit />
       <ConsistOf />
       <Stack />
