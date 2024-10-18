@@ -28,7 +28,7 @@ const Header = () => {
 
       <div className="flex flex-row gap-3">
         <ShowForPermission roles={[ADMIN]}>
-          <Link to="/">
+          <Link to="/adminpanel">
             <Icon
               icon="material-symbols:analytics-outline-rounded"
               width="22"
@@ -44,7 +44,7 @@ const Header = () => {
           </Link>
         </ShowForPermission>
 
-        <Link to={token ? "/" : "/"}>
+        <Link to={token ? "/profile" : "/"}>
           <Icon
             icon="gg:profile"
             width="26"
